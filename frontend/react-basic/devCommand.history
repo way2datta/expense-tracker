@@ -10,3 +10,4 @@ npm install --save-dev html-loader html-webpack-plugin
 npm install --save-dev css-loader file-loader style-loader
 npm install --save-dev mini-css-extract-plugin uglifyjs-webpack-plugin optimize-css-assets-webpack-plugin url-loader
 npm install --save-dev webpack-dev-middleware
+npm install --save-dev webpack-hot-middleware

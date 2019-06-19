@@ -2,7 +2,8 @@ import path from 'path'
 import express from 'express'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
-import config from '../../webpack.dev.config.js'
+import webpackHotMiddleware from 'webpack-hot-middleware'
+  import config from '../../webpack.dev.config.js'
 
 const app = express();
 const landingPage = path.join(__dirname, "index.html");
@@ -11,6 +12,8 @@ const compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
+
+app.use(webpackHotMiddleware(compiler))
 
 app.get('*', (req, res, next) => {
   compiler.outputFileSystem.readFile(landingPage, (err, result) => {
