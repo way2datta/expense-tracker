@@ -1,0 +1,15 @@
+{
+    "rootDir":"./",
+    "collectCoverage":true,
+    "collectCoverageFrom": [
+      "**/src/js/**/*.js"
+    ],
+    "setupFilesAfterEnv": ["./setupTests.js"],
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  }
+  
