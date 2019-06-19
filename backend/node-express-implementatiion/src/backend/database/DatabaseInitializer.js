@@ -1,4 +1,6 @@
 import { databaseConnectionString } from "./../config";
+import { seedCategories } from "./Seeder";
+
 
 export default class DatabaseInitializer {
     initialize() {
@@ -10,7 +12,6 @@ export default class DatabaseInitializer {
         const shouldSeedDatabase = process.env.SEED_DATABASE === "true";
 
         if(shouldSeedDatabase) {
-            const seedCategories = require('./Seeder');
             seedCategories();
         }
     }
