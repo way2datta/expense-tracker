@@ -11,3 +11,5 @@ npm install --save-dev css-loader file-loader style-loader
 npm install --save-dev mini-css-extract-plugin uglifyjs-webpack-plugin optimize-css-assets-webpack-plugin url-loader
 npm install --save-dev webpack-dev-middleware
 npm install --save-dev webpack-hot-middleware
+npm install --save-dev eslint babel-eslint eslint-loader
+npm install --save-dev eslint-plugin-react
