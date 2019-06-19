@@ -13,3 +13,5 @@ npm install --save-dev webpack-dev-middleware
 npm install --save-dev webpack-hot-middleware
 npm install --save-dev eslint babel-eslint eslint-loader
 npm install --save-dev eslint-plugin-react
+npm install --save react react-dom
+npm install --save-dev @babel-preset-react
