@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Message from './js/Message'
 import './css/style.css'
 
 ReactDOM.render(
-  <h1>Hello World!</h1>,
+  <Message />,
   document.getElementById('react-container') // eslint-disable-line no-undef
 )
 // Needed for Hot Module Replacement
