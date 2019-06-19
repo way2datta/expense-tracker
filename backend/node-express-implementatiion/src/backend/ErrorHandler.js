@@ -1,8 +1,6 @@
 import { handleValidationError } from "./handleValidationError";
-module.exports = errorHandler;
 
-/* eslint-disable no-unused-vars */
-function errorHandler(error, request, response, next) {
+export function errorHandler(error, request, response, next) {
     if (typeof (error) === 'string') {
         // custom application error
         return response.status(400).json({ message: error });

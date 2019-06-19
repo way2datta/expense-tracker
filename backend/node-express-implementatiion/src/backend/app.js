@@ -1,12 +1,11 @@
 'use strict';
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
-import config from '../../webpack.config.dev'
+import config from '../../webpack.dev.config'
 import express from 'express';
 import servicesRoutes from './routes/services';
 import DatabaseInitializer from "./database/DatabaseInitializer";
-
-const errorHandler = require('./ErrorHandler');
+import {errorHandler} from "./ErrorHandler";
 
 const app = express();
 const compiler = webpack(config);
