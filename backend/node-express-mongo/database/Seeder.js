@@ -3,7 +3,9 @@ const ExpenseCategory = require("./../models/ExpenseCategory");
 const Expense = require("./../models/Expense");
 var random = require('lodash').random;
 
-export function seedCategories() {
+module.exports = seedCategories;
+
+function seedCategories() {
     const expenseCategories = [
         { name: 'Bills' },
         { name: 'Grocery' },

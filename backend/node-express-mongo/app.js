@@ -1,18 +1,11 @@
 'use strict';
-import webpack from 'webpack'
-import webpackDevMiddleware from 'webpack-dev-middleware'
-import config from '../../webpack.dev.config'
 import express from 'express';
 import servicesRoutes from './routes/services';
 import DatabaseInitializer from "./database/DatabaseInitializer";
-import {errorHandler} from "./ErrorHandler";
+
+const errorHandler = require('./ErrorHandler');
 
 const app = express();
-const compiler = webpack(config);
-
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
-}));
 
 (new DatabaseInitializer()).initialize();
 

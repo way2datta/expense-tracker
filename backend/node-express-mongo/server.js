@@ -1,7 +1,7 @@
 'use strict';
-import app from './app'
+import app from './app.js'
 import Logger from "./Logger";
-import { apiServerPort } from "./config";
+const apiServerPort = require("./config").apiServerPort;
 
 app.listen(apiServerPort, () =>
     Logger.log(`Expense tracker app listening on port ${apiServerPort}!`));
