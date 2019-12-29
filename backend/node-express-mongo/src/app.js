@@ -7,7 +7,8 @@ const errorHandler = require('./ErrorHandler');
 var cors = require('cors')
 
 const app = express();
-var whitelist = ['http://localhost:3001']
+const uiAppUrls = require("./config").uiAppUrls;
+var whitelist = uiAppUrls;
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -17,7 +18,7 @@ var corsOptions = {
         }
     }
 };
-//app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 (new DatabaseInitializer()).initialize();
 
 const bodyParser = require('body-parser');
