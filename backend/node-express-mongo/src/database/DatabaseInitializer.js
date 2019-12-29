@@ -5,6 +5,7 @@ export default class DatabaseInitializer {
         const mongoose = require('mongoose');
         mongoose.Promise = global.Promise;
         mongoose.set('debug', true);
+        console.log(databaseConnectionString);
         mongoose.connect(databaseConnectionString, 
             { useNewUrlParser: true,
             useUnifiedTopology: true });

@@ -3,8 +3,6 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 export const apiServerPort = process.env.PORT;
 
-const databaseServer = process.env.DATABASE_SERVER;
-const databasePort = process.env.DATABASE_PORT;
-const databaseName = process.env.DATABASE_NAME;
+const dbConnectionString = process.env.DB_CONNECTION_STRING;
 
-export const databaseConnectionString = `mongodb://${databaseServer}:${databasePort}/${databaseName}`;
+export const databaseConnectionString = dbConnectionString;
