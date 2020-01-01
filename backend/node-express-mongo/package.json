@@ -22,7 +22,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/dev",
-    "lint": "node_modules/.bin/eslint src"
+    "lint": "node_modules/.bin/eslint src",
+    "fixlint": "node_modules/.bin/eslint src --fix"
   },
   "author": "",
   "license": "ISC",
