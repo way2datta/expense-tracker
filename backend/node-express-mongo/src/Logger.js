@@ -1,5 +1,5 @@
 export default class Logger {
-    static log(value) {
-        console.log(value);
-    }
+  static log(value) {
+    console.log(value);
+  }
 }
